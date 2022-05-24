@@ -1,0 +1,48 @@
+Creational Design Patterns -
+
+Creational Design Patterns are used to create complex objects
+
+Builder Design Patterns-
+
+So builder patterns are basically used for creating complex object step by step
+Here a builder class is responsible for building the object returning new object to client
+
+Now the problem with builder pattern we are trying to address is let say we create a simple Person class
+and this person class consist of large number of parameters so while creating the object of Person we have to pass
+multiple arguments and if the number of parameters are large then we have to pass arguments in the sequence
+
+for eg -
+
+class Person:
+    def __init__(self, name, age, phone, address):
+        self.name = name
+        self.age = age
+        self.phone = phone
+        self.address = address
+
+        # there could be 100s of paramters in a complex object
+
+    def __str__(self):
+        return f'Name : {self.name}, age: {self.age} phone: {self.phone} address: {self.address}'
+
+
+if __name__ == '__main__':
+
+    p = Person('Rob', 29, 28383822, 'UK')
+    print(p)
+
+
+so in the above class we have a problem that if we create object of a person we have to provide all the parameters along with that
+we also need to  maintain the sequence
+
+SO instead we will use builder patter to build the Person object , we will use getter and setter for all the required paramters
+along with that our Builder class will build the object and return it whenever needed
+
+By using  setter we will be able to make parameters optional while creating any complex object
+
+
+
+
+
+
+
