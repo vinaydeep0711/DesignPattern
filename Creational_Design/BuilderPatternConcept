@@ -35,7 +35,7 @@ if __name__ == '__main__':
 so in the above class we have a problem that if we create object of a person we have to provide all the parameters along with that
 we also need to  maintain the sequence
 
-SO instead we will use builder patter to build the Person object , we will use getter and setter for all the required paramters
+SO instead we will use builder pattern to build the Person object , we will use setter for all the required parameters
 along with that our Builder class will build the object and return it whenever needed
 
 By using  setter we will be able to make parameters optional while creating any complex object
